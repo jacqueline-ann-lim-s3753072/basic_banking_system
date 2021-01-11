@@ -1,0 +1,133 @@
+.piggy-bank {
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    width: 700px;
+    height: 500px;
+}
+
+.piggy-body {
+    top: 10%;
+    left: 15%;
+    background: #ffc0cb;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.right-eye {
+    top: 34%;
+    left: 26%;
+    background: #484848;
+    width: 7%;
+    height: 15%;
+    border-radius: 50%;
+}
+
+.left-eye {
+    top: 34%;
+    left: 4%;
+    background: #484848;
+    width: 7%;
+    height: 15%;
+    border-radius: 50%;
+}
+
+.nose-shadow {
+    top: 48.5%;
+    left: 0%;
+    background: #ff99aa;
+    width: 25%;
+    height: 40%;
+    border-radius: 50%;
+    transform: rotate(90deg);
+}
+
+.nose {
+    top: 50%;
+    left: -3%;
+    background: #ffc0cb;
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ff99aa;
+    border-radius: 50%;
+    transform: rotate(90deg);
+}
+
+.right-hole {
+    top: 62%;
+    left: 38%;
+    background: #ffd7e7;
+    border: 1px solid #ff99aa;
+    width: 30%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+.left-hole {
+    top: 18%;
+    left: 38%;
+    background: #ffd7e7;
+    border: 1px solid #ff99aa;
+    width: 30%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+.right-ear {
+    top: 4%;
+    left: 3%;
+    border-top: 30px solid transparent;
+    border-left: 80px solid #ff9999;
+    border-bottom: 75px solid transparent;
+    border-radius: 25px 0px;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.left-ear {
+    top: 8%;
+    left: 35%;
+    border-top: 32px solid transparent;
+    border-left: 82px solid #ff9999;
+    border-bottom: 75px solid transparent;
+    border-radius: 25px 0px 0px;
+    transform: rotate(-5deg);
+}
+
+.coin-hole {
+    top: 6%;
+    left: 38%;
+    background-color: black;
+    width: 100px;
+    height: 10px;
+    transform: rotate(-3deg);
+    transform: skew(10deg, -4deg);
+}
+
+.piggy-bank * {
+    position: absolute;
+}
+
+.coin {
+    background-color: orange;
+    border: 10px solid #cd7f32;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+
+.dollar-sign {
+    color: #a46628;
+    font-size: 70px;
+    margin-top: -2%;
+    margin-left: 25%;
+    font-family: Arial;
+}
+
+.piggy-bank-set {
+    margin-top: -300px;
+    margin-left: 480px;
+}
