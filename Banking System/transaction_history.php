@@ -17,8 +17,9 @@
                 $sender_customer_ID = intval($sender_id);
                 $receiver_customer_ID = intval($receiver_id);
 
-                while ($row = mysqli_fetch_assoc($result))
+                while ($row = mysqli_fetch_assoc($result)) //loop all the rows of customers
                 {
+                    //Once the sender has been identified, the transaction data will be recorded to the database, and the sender's current balance will be updated
                     if($row['cust_id'] == $sender_id) //to retrieve the SENDER's details
                     {
                         $sender_name = $row['cust_name'];
@@ -38,6 +39,7 @@
                         mysqli_query($conn, $sql_update);
                     }
 
+                    //the receiver's current balance should also be updated
                     else if($row['cust_id'] == $receiver_id) //to retrieve the RECEIVER's details
                     {
                         $receiver_updated_balance = floatval($row['acct_balance']) + floatval($amount);
