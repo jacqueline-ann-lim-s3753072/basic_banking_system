@@ -19,7 +19,7 @@
 
                 while ($row = mysqli_fetch_assoc($result))
                 {
-                    if($row['cust_id'] == $sender_id)
+                    if($row['cust_id'] == $sender_id) //to retrieve the SENDER's details
                     {
                         $sender_name = $row['cust_name'];
                         $sender_updated_balance = floatval($row['acct_balance']) - floatval($amount);
@@ -38,7 +38,7 @@
                         mysqli_query($conn, $sql_update);
                     }
 
-                    else if($row['cust_id'] == $receiver_id)
+                    else if($row['cust_id'] == $receiver_id) //to retrieve the RECEIVER's details
                     {
                         $receiver_updated_balance = floatval($row['acct_balance']) + floatval($amount);
 
