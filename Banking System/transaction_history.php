@@ -60,46 +60,51 @@
 </head>
 <body id = "transaction_history_page">
 
-<ul id="navbar">
-    <li style="float: left; padding: 14px 80px; font-size: 26px;"><b>TSF Bank</b></li>
-    <li><a href="transaction_history.php">Transaction History</a></li>
-    <li><a href="view_all_customers.php">View All Customers</a></li>
-    <li><a href="index.php">Home</a></li>
-</ul>
+    <!-- Navigation bar -->
+    <ul id="navbar">
+        <li style="float: left; padding: 14px 80px; font-size: 26px;"><b>TSF Bank</b></li>
+        <li><a href="transaction_history.php">Transaction History</a></li>
+        <li><a href="view_all_customers.php">View All Customers</a></li>
+        <li><a href="index.php">Home</a></li>
+    </ul>
 
-<table id = "transfer_history">
-    <tr>
-        <th>Transaction ID</th>
-        <th>Sender</th> 
-        <th>Recipient</th>
-        <th>Amount</th> 
-        <th>Transaction Date</th>
-    </tr>
-<?php
-    $sql = "SELECT * FROM transfer_history;";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
+    <!--Table containing the transaction records -->
+    <table id = "transfer_history">
+        <!--Column Headings -->
+        <tr>
+            <th>Transaction ID</th>
+            <th>Sender</th> 
+            <th>Recipient</th>
+            <th>Amount</th> 
+            <th>Transaction Date</th>
+        </tr>
+        
+    <!--Displaying the set of tuples from the database -->
+    <?php
+        $sql = "SELECT * FROM transfer_history;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
 
-    if($resultCheck > 0){
-        while ($row = mysqli_fetch_assoc($result)){
-            $transaction_id = $row['transaction_id'];
-            $sender_name = $row['sender_name'];
-            $receiver_name = $row['receiver_name'];
-            $amount = $row['transferred_amount'];
-            $transaction_date = $row['transaction_date'];
-    
-            echo '<tr> 
-                    <td>'.$transaction_id.'</td> 
-                    <td>'.$sender_name.'</td> 
-                    <td>'.$receiver_name.'</td> 
-                    <td>$'.$amount.'</td>    
-                    <td>'.$transaction_date.'</td>                
-                </tr> 
-                <br>';
+        if($resultCheck > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                $transaction_id = $row['transaction_id'];
+                $sender_name = $row['sender_name'];
+                $receiver_name = $row['receiver_name'];
+                $amount = $row['transferred_amount'];
+                $transaction_date = $row['transaction_date'];
+
+                echo '<tr> 
+                        <td>'.$transaction_id.'</td> 
+                        <td>'.$sender_name.'</td> 
+                        <td>'.$receiver_name.'</td> 
+                        <td>$'.$amount.'</td>    
+                        <td>'.$transaction_date.'</td>                
+                    </tr> 
+                    <br>';
+            }
         }
-    }
-?>
-</table>
+    ?>
+    </table>
 
 </body>
 </html>
