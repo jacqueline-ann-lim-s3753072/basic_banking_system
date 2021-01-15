@@ -11,6 +11,7 @@
 
 <body id="home_page">
 
+    <!--Navigation Bar -->
     <ul id="navbar">
         <li style="float: left; padding: 14px 80px; font-size: 26px;"><b>TSF Bank</b></li>
         <li><a href="transaction_history.php">Transaction History</a></li>
@@ -18,6 +19,7 @@
         <li><a href="index.php">Home</a></li>
     </ul>
 
+    <!--Main Content -->
     <form class = "home-page" method = "post" action = "transfer_money.php">
         <p class="heading">We Find Ways</p>
         <button class="button_transfer button button_transfer1" name="transfer" value=NULL>Transfer</button>
@@ -45,6 +47,7 @@
         </div>
     </form>
 
+    <!--Footer -->
     <footer>
         <p id="footer">Copyright 
         <span>&#169;</span>
